@@ -1,0 +1,23 @@
+form{
+    width: 400px;
+    height: 250px;
+    background-color: rgb(165, 163, 163);
+    border: 2px solid black;
+    border-radius: 2px;
+    padding-left: 50px;
+    margin:auto;
+
+}
+form{
+    color:rgb(21, 8, 8);
+}
+form h2{
+    padding-left:130px;
+}
+button{
+    margin-left: 120px;
+    background-color: rgb(103, 130, 103);
+    border-radius: 5px;
+    height: 40px;
+    width: 100px;
+}

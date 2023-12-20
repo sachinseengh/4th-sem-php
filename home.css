@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+.home{
+    margin-left:40vw;
+    margin-top: 5px;
+    border: 2px solid black;
+    height: 200px;
+    width: 300px;
+    background-color: rgb(216, 210, 210);
+    padding:10px;
+}
+.home a{
+    text-decoration: none;
+}
