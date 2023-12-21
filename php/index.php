@@ -15,18 +15,19 @@
 </head>
 <body>
     <div class="form">
-    <form action="loginprocess.php" method="post">
+    <form action="signup.php" method="post">
         <div>
           
+   
 
 
-<?php if(isset($_GET['msg'])) {?>
+        <?php if(isset($_GET['msg'])) {?>
     <p class="error"><?php echo $_GET['msg']; ?></p>
     <?php } ?>
 
         </div>
         <div>
-        <label style="color: green;">Login</label>
+        <label style="color: green;">Register Account</label>
         </div>
         
         <label>Username</label>
@@ -42,8 +43,8 @@
             <br>
             <input type="submit" value="submit">
         </div>
-        <div>Don't have an account
-            <a href="signup.php">Sign up</a>
+        <div>Already have a account
+            <a href="login.php">Log in</a>
         </div>
         </div>  
     </form>

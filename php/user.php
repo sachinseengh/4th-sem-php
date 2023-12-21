@@ -1,5 +1,8 @@
 <?php
 
+require 'db.php';
+
+
  class User{
     private $username;
     private $password;
@@ -9,13 +12,18 @@
         $this->password=$p;
 
     }
-    public function verify_user(){
-        if($this->username == "admin" && $this->password == "123"){
-            return true;
+    public function insert_user(){
+        global $conn;
+        $sql = "insert into detail(name,password)values ('$this->username','$this->password')";
+
+        if(mysqli_query($conn,$sql)){
+            header("Location:index.php?msg=Signup Successfully");
+
+        }else{
+            header("Location:index.php?msg=Signup unsuccessfully");
         }
-        else{
-            return false;
-        }
+
+        
     }
 }
 
