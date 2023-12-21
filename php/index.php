@@ -12,6 +12,7 @@
             margin-top: 50px;
         }
     </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="form">

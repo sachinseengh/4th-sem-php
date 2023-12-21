@@ -1,0 +1,9 @@
+.form{
+    height:300px;
+    width:300px;
+    border: 5 solid black;
+    background-color: rgb(240, 237, 237);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

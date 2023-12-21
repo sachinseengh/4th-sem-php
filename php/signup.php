@@ -1,5 +1,5 @@
 <?php
-require('db.php');
+
 require_once("user.php");
 
 $username =$_POST['username'];
@@ -17,9 +17,13 @@ $password = $_POST['password'];
 //     echo "invalid user";
 // }
 
+
+
 $user = new User($username,$password);
 $returnherne=$user->insert_user();
 
 echo "$returnherne";
+
+
 
 ?>
