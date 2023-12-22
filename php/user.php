@@ -1,6 +1,10 @@
 <?php
 
+session_start();
 require 'Database1.php';
+
+
+
 
 
  class User{
@@ -29,24 +33,49 @@ require 'Database1.php';
   
         
     }
+
     public function verify_user(){
-        $sql="Select * from detail where name ='$username' and password='$password'";
+        $sql="Select * from detail where name ='$this->username' and password='$this->password'";
+        
 
        $result=mysqli_query($this->con,$sql);
 
-       if(mysqli_num_rows($result)>1){
+
+       
+       if(mysqli_num_rows($result)>=1){
     
+                $_SESSION['logged_user']=$this->username;       
                 header('Location:home.php?msg="Hello sir"');
 
-    }else{
+        }else{
             header('Location:login.php?msg="Invalid Credentials"');
-}
+          }
+    }
 
+
+
+    public function cpassword($oldpassword,$newpassword){
+
+
+        $sql= "update detail set password='$newpassword' where password = '$oldpassword' and name='$_SESSION['logged_user']";
+
+
+        $res=mysqli_query($this->con,$sql);
+        if($res){
+            header("Location:login.php?msg=Password changed successfully");
+        }else{
+            header("Location:login.php?msg=password not matched");
+        }
+
+    
 
     }
 
-    
+    }
 }
+
+    
+
 
 
 ?>

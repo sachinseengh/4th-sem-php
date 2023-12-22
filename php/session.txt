@@ -1,0 +1,7 @@
+session is used to track user activity
+
+session us to avoid the user to access the rest of the page without loggin in
+
+
+
+so store the the id pass in the session  and check if the value is in the session then they can view pages

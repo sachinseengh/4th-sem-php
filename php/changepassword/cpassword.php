@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <title>Change Password</title>
     <style>
         .form{
             
@@ -12,42 +12,35 @@
             margin-top: 50px;
         }
     </style>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <div class="form">
-    <form action="signup.php" method="post">
+    <form action="cprocess.php" method="post">
         <div>
-          
-   
-
-
         <?php if(isset($_GET['msg'])) {?>
     <p class="error"><?php echo $_GET['msg']; ?></p>
     <?php } ?>
 
         </div>
         <div>
-        <label style="color: green;">Register Account</label>
+        <label style="color: green;">Change Password</label>
         </div>
         
-        <label>Username</label>
+        <label>Old Password</label>
         <div>
-            <input type="text" name="username" id="username">
+            <input type="text" name="oldpassword" id="oldpassword">
             
         </div>
-        <label >Password</label>
+        <label >New Password</label>
         <div>
-        <input type="password" name="password" id="password">
+        <input type="password" name="newpassword" id="newpassword">
         </div>
         <div>
             <br>
             <input type="submit" value="submit">
         </div>
-        <div>Already have a account
-            <a href="login.php">Log in</a>
         
-        </div>
         </div>  
     </form>
 </body>
