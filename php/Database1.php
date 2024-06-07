@@ -6,7 +6,7 @@
 class Database1 {
     private $host = "localhost";
     private $username = "root";
-    private $password = "";
+    private $password = " ";
     private $database = "scripting";
 
     public function connect() {

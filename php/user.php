@@ -3,10 +3,6 @@
 session_start();
 require 'Database1.php';
 
-
-
-
-
  class User{
     private $username;
     private $password;
@@ -28,20 +24,16 @@ require 'Database1.php';
 
         }else{
             header("Location:index.php?msg=Signup unsuccessfully");
-        }
-
-  
-        
+        }    
     }
+
 
     public function verify_user(){
         $sql="Select * from detail where name ='$this->username' and password='$this->password'";
         
 
        $result=mysqli_query($this->con,$sql);
-
-
-       
+     
        if(mysqli_num_rows($result)>=1){
     
                 $_SESSION['logged_user']=$this->username;       
@@ -52,19 +44,17 @@ require 'Database1.php';
           }
     }
 
-
-
+    
     public function cpassword($oldpassword,$newpassword){
 
-
-        $sql= "update detail set password='$newpassword' where password = '$oldpassword' and name='$_SESSION['logged_user']";
+        $sql="update detail set password='$newpassword' where password='$oldpassword' and name='$_SESSION[logged_user]'";
 
 
         $res=mysqli_query($this->con,$sql);
         if($res){
-            header("Location:login.php?msg=Password changed successfully");
+            header("Location:../login.php?msg=Password changed successfully");
         }else{
-            header("Location:login.php?msg=password not matched");
+            header("Location:../login.php?msg=password not matched");
         }
 
     
@@ -72,7 +62,7 @@ require 'Database1.php';
     }
 
     }
-}
+
 
     
 

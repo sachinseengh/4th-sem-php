@@ -2,7 +2,7 @@
 
 
 
-require_once("user.php");
+require_once("../user.php");
 
 $opass =$_POST['oldpassword'];
 $npass = $_POST['newpassword'];
@@ -13,7 +13,7 @@ $npass = $_POST['newpassword'];
 
 
 $user = new User($opass,$npass);
-$user->cpassword();
+$user->cpassword($opass,$npass);
 
 
 
